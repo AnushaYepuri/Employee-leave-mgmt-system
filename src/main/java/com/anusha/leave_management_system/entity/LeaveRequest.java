@@ -1,7 +1,9 @@
 package com.anusha.leave_management_system.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
+
+import com.anusha.leave_management_system.enums.LeaveStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -24,7 +26,8 @@ public class LeaveRequest {
     private LocalDateTime requestedAt;
 
    private String  leaveType;
-   private Date startDate;
-   private Date endDate;
-  private int   status; //(PENDING / APPROVED / REJECTED)
+    private LocalDate startDate;
+    private LocalDate endDate;
+    @Enumerated(EnumType.STRING)
+    private LeaveStatus status;
 }

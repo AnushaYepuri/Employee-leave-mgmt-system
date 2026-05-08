@@ -17,7 +17,6 @@ public class LeaveBalance {
     private Employee employee;
 
     private String leavetype;
-    private int  totalLeaves;
+    private int totalLeaves;
     private int usedLeaves;
-    private int remainingLeaves;
 }
