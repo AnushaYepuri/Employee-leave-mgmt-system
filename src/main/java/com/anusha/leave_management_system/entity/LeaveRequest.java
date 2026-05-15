@@ -16,7 +16,7 @@ import org.hibernate.annotations.CreationTimestamp;
 public class LeaveRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private int  id;
+   private Long  id;
 
     @ManyToOne
     @JoinColumn(name = "employee_id")
@@ -26,8 +26,12 @@ public class LeaveRequest {
     private LocalDateTime requestedAt;
 
    private String  leaveType;
+   private  int NumberOfDays;
     private LocalDate startDate;
     private LocalDate endDate;
+
     @Enumerated(EnumType.STRING)
     private LeaveStatus status;
+
+
 }
